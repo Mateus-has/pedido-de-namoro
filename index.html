@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia dos Namorados</title>
+    <style>
+        
+        body {
+            background-color: rgb(107, 101, 101);
+        }
+
+        .painel{
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.993);
+            width: 500px;
+            height: 700px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #sim {
+            height: 55px;
+            width: 100px;
+            background-color: rgb(25, 146, 35);
+            border: 2px solid rgb(5, 5, 5);
+            border-radius: 10px;
+            color: white;
+            margin-left: -80px;
+            cursor: pointer;
+        }
+
+        #nao {
+            position: absolute;
+            height: 55px;
+            width: 100px;
+            background-color: rgb(235, 18, 18);
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+            transition: left 0.5s ease , top 0.5s ease;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="painel">
+        <h1>Feliz dia dos Namorados</h1>
+        <img src="https://media1.tenor.com/images/645b93ea8ebcdeaa12805e6f94060e9e/tenor.gif?itemid=14645087" alt="">
+        <h3>Quer Namorar Comigo ?</h3>
+        <button id="sim"> SIM </button>
+        <button onmouseover="fuja()" id="nao"> NÃO </button>
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+
+        document.getElementById('sim') .addEventListener('click', function () {
+            window.location.href = "https://static.mundodasmensagens.com/upload/textos/a/m/amo-voce-e-sei-que-vou-amar-por-toda-minha-vida-e-como-este-amor-NQRBD-cxl.jpg";
+        });
+
+    </script>
+</body>
+</html>
